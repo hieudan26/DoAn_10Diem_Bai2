@@ -14,7 +14,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         public double dLuongCoBan;
         public string sCMND;
         public int iNamSinh;
-   
+
+        public abstract double TinhThue();
+
+        public abstract double TinhLuong();
         public CaNhan() { }
 
         public CaNhan(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh)
@@ -81,9 +84,13 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         {
             return 2020 - this.iNamSinh;
         }
-
-        public abstract double TinhThue();
-
-        public abstract double TinhLuong();
+        public int ThoiGianHopDongConLai()
+        {
+            DateTime temp = new DateTime(this.iThoiGianHopDong+this.dNgayGiaNhap.Year, this.dNgayGiaNhap.Month, this.dNgayGiaNhap.Day);
+            DateTime now = DateTime.Now;
+            TimeSpan res = temp - now;
+            Console.WriteLine(res.TotalDays);
+            return (int)res.TotalDays;
+        }
     }
 }
