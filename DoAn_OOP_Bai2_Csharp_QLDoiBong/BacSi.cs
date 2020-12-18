@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
 {
-    //hello
+    //hello ban thang minh la dan
     class BacSi : CaNhan
     {
         private string sRank;
