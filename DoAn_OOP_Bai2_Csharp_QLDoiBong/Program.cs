@@ -10,8 +10,21 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
     {
         static void Main(string[] args)
         {
-            CauThu a = new CauThu("thang",2,80000000,"123",2001,7,50,75,"trai","cm","cb");
-            a.Xuat();
+            List<CauThu> list= new List<CauThu>();
+            Random a = new Random();
+            for (int i=0;i<10;i++)
+            {
+                
+                var x = a.Next(101);
+                Console.WriteLine("=============================: "+x);
+                CauThu temp = new CauThu(x.ToString(), x, x, x.ToString(), x, x, x, x, x.ToString(), x.ToString(), x.ToString());
+                list.Add(temp);
+            }
+            QuanLyCauThu temp2 = new QuanLyCauThu(list);
+            temp2.Sort();
+            temp2.xuat();
+            
+            
         }
     }
 }

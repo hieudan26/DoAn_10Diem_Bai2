@@ -68,6 +68,7 @@
     <Compile Include="NVVeSinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyCauThu.cs" />
     <Compile Include="San.cs" />
     <Compile Include="SanCoReal.cs" />
     <Compile Include="SanFUTSAL.cs" />
