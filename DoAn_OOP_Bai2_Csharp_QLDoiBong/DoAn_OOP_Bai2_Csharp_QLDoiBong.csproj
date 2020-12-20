@@ -64,6 +64,7 @@
     <Compile Include="DoiBong.cs" />
     <Compile Include="HLVChienThuat.cs" />
     <Compile Include="HLVTheLuc.cs" />
+    <Compile Include="HoatDong.cs" />
     <Compile Include="NVBaoVe.cs" />
     <Compile Include="NVVeSinh.cs" />
     <Compile Include="Program.cs" />

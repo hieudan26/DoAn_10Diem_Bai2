@@ -50,20 +50,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.sMauDongPhuc = Console.ReadLine();
         }
 
-        public void Nhap(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, int time, string color)
-        {
-            base.Nhap(hoten, thoigianhopdong
-            , luongcoban, cmnd, namsinh);
-            this.iThoiGianLamTrongNgay = time;
-            this.sMauDongPhuc = color;
-        }
-
-        public void Nhap(string hoten, double luongcoban, string cmnd, int time)
-        {
-            base.Nhap(hoten, luongcoban, cmnd);
-            this.iThoiGianLamTrongNgay = time;
-        }
-
         public override double TinhLuong()
         {
             return base.dLuongCoBan;
