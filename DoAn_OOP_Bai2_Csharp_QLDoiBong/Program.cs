@@ -17,7 +17,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 
                 var x = a.Next(101);
                 Console.WriteLine("=============================: "+x);
-                CauThu temp = new CauThu(x.ToString(), x, x, x.ToString(), x, x, x, x, x.ToString(), x.ToString(), x.ToString());
+                CauThu temp = new CauThu(x.ToString(), x, x, x.ToString(), x, x, x, x, x.ToString(), x.ToString());
                 list.Add(temp);
             }
             QuanLyCauThu temp2 = new QuanLyCauThu(list);

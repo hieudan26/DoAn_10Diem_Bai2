@@ -144,6 +144,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             }
             return temp;
         }
+        
         public void xuat()
         {
             foreach (var item in lDsCauThu)

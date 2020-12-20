@@ -9,6 +9,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
     //hello ban thang minh la dan
     class BacSi : CaNhan
     {
+        private const double hesoluong = 1.15;
         private string sRank;
         private string sTruongDaoTao;
 
@@ -73,21 +74,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.sTruongDaoTao = tentruong;
         }
 
-        public override double TinhLuong()
-        {
-            double luong = this.dLuongCoBan + this.dLuongCoBan * 0.15;
-            return luong;
-        }
-
-        public double GiamTru()
-        {
-            double GiamTruGiaCanhBanThan = 11000000;
-            //8% BHXH, 1.5% BHYT, 1% BHTN
-            double BaoHiem = this.TinhLuong() * (0.08 + 0.015 + 0.01);
-            double GiamTru = GiamTruGiaCanhBanThan + BaoHiem;
-            return GiamTru;
-        }
-
         public void Kham(ref CauThu a)
         {
             Console.Write("Moi nhap Tinh Trang Cau Thu: ");
@@ -102,95 +88,9 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             a.TinhTrangTheLuc = 100;
             Console.WriteLine("Cau thu dang o tinh trang the luc tot nhat !!");
         }
-        public int XacDinhBacThue()
+        public override double TinhLuong()
         {
-            double ThuNhapTinhThue = this.TinhLuong() - this.GiamTru();
-            if (ThuNhapTinhThue <= 5000000)
-                return (int)Bac.Bac1;
-            else
-
-            {
-                if (ThuNhapTinhThue <= 10000000)
-                {
-                    return (int)Bac.Bac2;
-                }
-                else
-                {
-                    if (ThuNhapTinhThue <= 18000000)
-                    {
-                        return (int)Bac.Bac3;
-                    }
-                    else
-                    {
-                        if (ThuNhapTinhThue <= 32000000)
-                        {
-                            return (int)Bac.Bac4;
-                        }
-                        else
-                        {
-                            if (ThuNhapTinhThue <= 52000000)
-                            {
-                                return (int)Bac.Bac5;
-                            }
-                            else
-                            {
-                                if (ThuNhapTinhThue <= 80000000)
-                                {
-                                    return (int)Bac.Bac6;
-                                }
-                                else
-                                    return (int)Bac.Bac7;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        public override double TinhThue()
-        {
-            double ThuNhapTinhThue = this.TinhLuong() - this.GiamTru();
-            int Bac = XacDinhBacThue();
-            double SoThuePhaiNop = 0;
-            switch (Bac)
-            {
-                case 1:
-                    {
-                        SoThuePhaiNop = ThuNhapTinhThue * 0.05;
-                        break;
-                    }
-                case 2:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.1) - 250000;
-                        break;
-                    }
-                case 3:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.15) - 750000;
-                        break;
-                    }
-                case 4:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.2) - 1650000;
-                        break;
-                    }
-                case 5:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.25) - 3250000;
-                        break;
-                    }
-                case 6:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.3) - 5850000;
-                        break;
-                    }
-                default:
-                    {
-                        SoThuePhaiNop = (ThuNhapTinhThue * 0.35) - 9850000;
-                        break;
-                    }
-            }
-            return SoThuePhaiNop;
+            return dLuongCoBan * hesoluong - this.TinhThue(hesoluong);
         }
 
         public override void Xuat()
@@ -201,7 +101,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("Truong dao tao cua Bac Si la: " + this.sTruongDaoTao);
             Console.WriteLine("Luong cua Bac Si la: " + this.TinhLuong() + " VND");
             if (this.TinhLuong() > 11000000)
-                Console.WriteLine("Thue thu nhap ca nhan cua Cau Thu la: " + this.TinhThue() + " VND");
+                Console.WriteLine("Thue thu nhap ca nhan cua Cau Thu la: " + this.TinhThue(hesoluong) + " VND");
             else
                 Console.WriteLine("Doi tuong khong nam trong danh sach dong thue!! ");
         }
