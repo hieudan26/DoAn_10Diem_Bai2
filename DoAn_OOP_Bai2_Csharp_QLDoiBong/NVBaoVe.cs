@@ -8,6 +8,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
 {
     public class NVBaoVe : CaNhan
     {
+        private const double hesoluong = 1.0;
         private int iThoiGianLamTrongNgay;
         private string sMauDongPhuc;
 
@@ -68,11 +69,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             return base.dLuongCoBan;
         }
         //NVBaoVe luong < 11tr => ko phai doi tuong nop thue
-        public override double TinhThue()
-        {
-            throw new NotImplementedException();
-        }
-
         public override void Xuat()
         {
             base.Xuat();
