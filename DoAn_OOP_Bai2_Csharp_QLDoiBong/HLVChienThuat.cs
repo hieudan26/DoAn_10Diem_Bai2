@@ -58,28 +58,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.Write("Moi nhap so doi ma HLV da tung cong tac: ");
             this.iKinhNghiem = int.Parse(Console.ReadLine());
         }
-
-        public void Nhap(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, string rank, string quocgia, int kinhnghiem)
-        {
-            base.Nhap(hoten, thoigianhopdong, luongcoban, cmnd, namsinh);
-
-            this.sRank = rank;
-            this.sQuocGia = quocgia;
-            this.iKinhNghiem = kinhnghiem;
-        }
-
-        public void Nhap(string hoten, double luongcoban, string cmnd, string rank)
-        {
-            base.Nhap(hoten, luongcoban, cmnd);
-            this.sRank = rank;
-        }
-
         public override double TinhLuong()
         {
             return this.dLuongCoBan* hesoluong - TinhThue(hesoluong);
         }
-
-
         public override void Xuat()
         {
             base.Xuat();
@@ -96,6 +78,12 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 Console.WriteLine("Thue thu nhap ca nhan cua HLV Chien Thuat la: " + this.TinhThue(hesoluong) + " VND");
             else
                 Console.WriteLine("Doi tuong khong nam trong danh sach dong thue!! ");
+        }
+        public string ChonChienThuat()
+        {
+            Console.Write("Ban Muon chon chien thuat nao: ");
+            string temp=Console.ReadLine();
+            return temp;
         }
     }
 }

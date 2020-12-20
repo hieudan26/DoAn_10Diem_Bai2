@@ -46,13 +46,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             set { this.sViTriDaChinh = value; }
         }
 
-        
-
-        public CauThu() : base() 
-        {
-        }
-
-        public CauThu(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, int soao, int tinhtrangsuckhoe, int tinhtrangtheluc,  string chanthuan, string vitridachinh) : base(hoten, thoigianhopdong
+        public CauThu(string hoten, DateTime NgayGiaNhap ,int thoigianhopdong, double luongcoban, string cmnd, int namsinh, int soao, int tinhtrangsuckhoe, int tinhtrangtheluc,  string chanthuan, string vitridachinh) : base(hoten, NgayGiaNhap, thoigianhopdong
             , luongcoban, cmnd, namsinh)
         {
             this.iSoAo = soao;
@@ -66,7 +60,9 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         {
             this.iSoAo = soao;
         }
-
+        public CauThu() : base()
+        {
+        }
         public override void Nhap()
         {
             Console.WriteLine("Nhap Thong Tin Cau Thu ~~");
@@ -86,22 +82,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.Write("Vi tri Da Chinh trong doi hinh cua Cau Thu la: ");
             this.sViTriDaChinh = Console.ReadLine();
         }
-
-        public void Nhap(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, int soao, int tinhtrangsuckhoe, int tinhtrangtheluc, string chanthuan, string vitridachinh)
-        {
-            base.Nhap(hoten, thoigianhopdong, luongcoban, cmnd, namsinh);
-            this.iSoAo = soao;
-            this.iTinhTrangTheLuc = tinhtrangtheluc;
-            this.iTinhTrangSucKhoe = tinhtrangsuckhoe;
-            this.sChanThuan = chanthuan;
-            this.sViTriDaChinh = vitridachinh;
-        }
-
-        public void Nhap(string hoten, double luongcoban, string cmnd, int soao)
-        {
-            base.Nhap(hoten, luongcoban, cmnd);
-            this.iSoAo = soao;
-        }
         public override double TinhLuong()
         {
             return dLuongCoBan *hesoluong - this.TinhThue(hesoluong);
@@ -111,7 +91,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("Thong Tin Cau Thu ~~ ");
             base.Xuat();
 
-            //Console.WriteLine("Tuoi cua Cau Thu la: " + this.TinhTuoi());
+            Console.WriteLine("Tuoi cua Cau Thu la: " + this.TinhTuoi());
             Console.WriteLine("So Ao co dinh cua Cau Thu la: " + this.iSoAo);
             Console.WriteLine("Chan Thuan cua Cau Thu la: " + this.sChanThuan);
             Console.WriteLine("Vi tri Da Chinh trong doi hinh la: " + this.sViTriDaChinh);

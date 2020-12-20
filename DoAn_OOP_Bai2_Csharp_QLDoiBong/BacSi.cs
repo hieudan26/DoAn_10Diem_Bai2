@@ -61,31 +61,20 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.sTruongDaoTao = Console.ReadLine();
         }
 
-        public void Nhap(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, string rank, string tentruong)
-        {
-            base.Nhap(hoten, thoigianhopdong, luongcoban, cmnd, namsinh);
-            this.sRank = rank;
-            this.sTruongDaoTao = tentruong;
-        }
 
-        public void Nhap(string hoten, double luongcoban, string cmnd, string tentruong)
+        public void Kham(ref int a)
         {
-            base.Nhap(hoten, luongcoban, cmnd);
-            this.sTruongDaoTao = tentruong;
-        }
-
-        public void Kham(ref CauThu a)
-        {
+            
             Console.Write("Moi nhap Tinh Trang Cau Thu: ");
-            a.TinhTrangTheLuc = int.Parse(Console.ReadLine());
-            if (a.TinhTrangTheLuc < 50)
+            a = int.Parse(Console.ReadLine());
+            if (a < 50)
                 Console.WriteLine("Cau thu bi chan thuong !!");
             else
                 Console.WriteLine("Cau thu dang o tinh trang the luc tot !!");
         }
-        public void ChuaBenh(ref CauThu a)
+        public void ChuaBenh(ref int a)
         {
-            a.TinhTrangTheLuc = 100;
+            a = 100;
             Console.WriteLine("Cau thu dang o tinh trang the luc tot nhat !!");
         }
         public override double TinhLuong()

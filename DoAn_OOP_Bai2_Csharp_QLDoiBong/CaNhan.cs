@@ -27,7 +27,17 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Bac6,
             Bac7
         }
-        public CaNhan(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh)
+        public CaNhan(string hoten,DateTime NgayGiaNhap, int thoigianhopdong, double luongcoban, string cmnd, int namsinh)
+        {
+            this.sHoTen = hoten;
+            this.dNgayGiaNhap = NgayGiaNhap;
+            this.iThoiGianHopDong = thoigianhopdong;
+            this.dLuongCoBan = luongcoban;
+            this.sCMND = cmnd;
+            this.iNamSinh = namsinh;
+        }
+
+        public  CaNhan(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh)
         {
             this.sHoTen = hoten;
             this.iThoiGianHopDong = thoigianhopdong;
@@ -42,16 +52,19 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.dLuongCoBan = luongcoban;
             this.sCMND = cmnd;
         }
-
         public abstract double TinhLuong();
         public virtual void Nhap()
         {
             Console.Write("Moi nhap Ho Ten thanh vien: ");
             this.sHoTen = Console.ReadLine();
 
-            Console.Write("Moi nhap Thoi Gian Hop Dong con lai: ");
+            Console.Write("Nhap ngay nghi phep dinh dang dd/mm/yyyy: ");
+            this.dNgayGiaNhap = DateTime.Parse(Console.ReadLine());
+
+            Console.Write("Moi nhap Thoi Gian Hop Dong: ");
             this.iThoiGianHopDong = int.Parse(Console.ReadLine());
 
+            
             Console.Write("Moi nhap Luong Co Ban cua thanh vien: ");
             this.dLuongCoBan = double.Parse(Console.ReadLine());
 
@@ -62,26 +75,12 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.iNamSinh = int.Parse(Console.ReadLine());
         }
 
-        public void Nhap(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh)
-        {
-            this.sHoTen = hoten;
-            this.iThoiGianHopDong = thoigianhopdong;
-            this.dLuongCoBan = luongcoban;
-            this.sCMND = cmnd;
-            this.iNamSinh = namsinh;
-        }
-
-        public void Nhap(string hoten, double luongcoban, string cmnd)
-        {
-            this.sHoTen = hoten;
-            this.dLuongCoBan = luongcoban;
-            this.sCMND = cmnd;
-        }
 
         public virtual void Xuat()
         {
             Console.WriteLine("Ho Ten thanh vien la: " + this.sHoTen);
-            Console.WriteLine("Thoi gian het han Hop Dong cua thanh vien la: " + this.iThoiGianHopDong);
+            Console.WriteLine("Ngay Gia Nhap: {0:d}",this.dNgayGiaNhap);
+            Console.WriteLine("Thoi gian Hop Dong cua thanh vien la: " + this.iThoiGianHopDong + " nam");
             Console.WriteLine("Luong co ban cua thanh vien la: " + this.dLuongCoBan + " VND");
             Console.WriteLine("So CMND cua thanh vien la: " + this.sCMND);
             Console.WriteLine("Nam sinh cua thanh vien la: " + this.iNamSinh);
