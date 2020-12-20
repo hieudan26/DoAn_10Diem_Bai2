@@ -72,7 +72,6 @@
     <Compile Include="San.cs" />
     <Compile Include="SanCoReal.cs" />
     <Compile Include="SanFUTSAL.cs" />
-    <Compile Include="TrongTai.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
