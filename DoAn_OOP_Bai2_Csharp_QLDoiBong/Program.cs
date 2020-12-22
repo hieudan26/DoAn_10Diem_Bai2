@@ -44,7 +44,11 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             temp2.XemtinhTrangtheLuc();
             temp2.XemtinhTrangSucKhoe();
             temp2.CauThuCoTheLucTotNhat().Xuat();
-            temp2.CauThuCoTheSucKhoeTotNhat().Xuat();
+            temp2.CauThuCoTheSucKhoeYeuNhat().Xuat();
+            Console.WriteLine("Tong luong toan cau tu: " + temp2.TongLuongToanCauThu());
+            DoiBong temp5 = new DoiBong();
+            temp5.Nhap();
+            Console.WriteLine("Tong luong doi bong: " + temp5.TongLuongDoiBong());
         }
     }
 }

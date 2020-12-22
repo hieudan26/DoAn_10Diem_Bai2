@@ -73,7 +73,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.Write("Tinh Trang The Luc cua Cau Thu: ");
             this.iTinhTrangTheLuc = int.Parse(Console.ReadLine());
 
-            Console.Write("Tinh Trang Suc Khoe cua Cau Tu: ");
+            Console.Write("Tinh Trang Suc Khoe cua Cau Thu: ");
             this.iTinhTrangSucKhoe = int.Parse(Console.ReadLine());
 
             Console.Write("Chan thuan cua Cau Thu la: ");
@@ -103,6 +103,23 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 Console.WriteLine("Doi tuong khong nam trong danh sach dong thue!! ");
         }
 
+        public static bool operator >(CauThu a, CauThu b)
+        {
+            int value1 = a.TinhTrangTheLuc;
+            int value2 = b.TinhTrangTheLuc;
+            return value1 > value2;
+        }
 
+        public static bool operator <(CauThu a, CauThu b)
+        {
+            double value1 = a.TinhTrangSucKhoe;
+            double value2 = b.TinhTrangSucKhoe;
+            return value1 < value2;
+        }
+
+        public static double operator +(CauThu a, double num)
+        {
+            return a.TinhLuong() + num;
+        }
     }
 }

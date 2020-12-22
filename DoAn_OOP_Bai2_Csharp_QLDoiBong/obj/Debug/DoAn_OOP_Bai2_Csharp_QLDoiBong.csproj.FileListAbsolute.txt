@@ -26,3 +26,10 @@ D:\School\OOP\OOP cuoi ki\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2
 D:\School\OOP\OOP cuoi ki\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.csproj.CoreCompileInputs.cache
 D:\School\OOP\OOP cuoi ki\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.exe
 D:\School\OOP\OOP cuoi ki\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.pdb
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\bin\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.exe.config
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\bin\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.exe
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\bin\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.pdb
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.csprojAssemblyReference.cache
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.csproj.CoreCompileInputs.cache
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.exe
+E:\Bai2\DoAn_OOP_Bai2_Csharp_QLDoiBong\obj\Debug\DoAn_OOP_Bai2_Csharp_QLDoiBong.pdb

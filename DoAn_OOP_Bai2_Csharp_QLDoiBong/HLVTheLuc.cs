@@ -52,8 +52,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             return this.dLuongCoBan * hesoluong - this.TinhThue(hesoluong);
         }
 
-
-       
         public override void Xuat()
         {
             
@@ -71,6 +69,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             else
                 Console.WriteLine("Doi tuong khong nam trong danh sach dong thue!! ");
         }
-    }
-    
+
+        public static double operator +(HLVTheLuc a, double num)
+        {
+            return a.TinhLuong() + num;
+        }
+    }  
 }

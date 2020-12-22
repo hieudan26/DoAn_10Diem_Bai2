@@ -61,5 +61,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("Tong thoi gian lam tren mot ngay la: " + this.iThoiGianLamTrongNgay);
             Console.WriteLine("Mau Dong Phuc NV Bao Ve: " + this.sMauDongPhuc);
         }
+
+        public static double operator +(NVBaoVe a, double num)
+        {
+            return a.TinhLuong() + num;
+        }
     }
 }

@@ -85,5 +85,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             string temp=Console.ReadLine();
             return temp;
         }
+
+        public static double operator +(HLVChienThuat a, double num)
+        {
+            return a.TinhLuong() + num;
+        }
     }
 }

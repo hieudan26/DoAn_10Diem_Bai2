@@ -12,10 +12,12 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         private string sTenNhaTaiTro;
         private List<CaNhan> lDoiBong;
         private San sanDoiBong;
+        public double temp = 0;
 
         public string NhaTaiTro
         {
-            get;set;
+            get { return this.sTenNhaTaiTro; }
+            set { this.sTenNhaTaiTro = value; }
         }
         public string TenDoiBong
         {
@@ -50,6 +52,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
 
         public void Nhap()
         {
+            //double temp = 0;
             Console.Write("Moi nhap Ten Doi Bong: ");
             this.sTenDoiBong = Console.ReadLine();
 
@@ -62,6 +65,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             {
                 CauThu a = new CauThu();
                 a.Nhap();
+                this.temp = a + this.temp;
                 this.lDoiBong.Add(a);
             }
 
@@ -71,6 +75,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             {
                 HLVTheLuc b = new HLVTheLuc();
                 b.Nhap();
+                this.temp = b + this.temp;
                 this.lDoiBong.Add(b);
             }
 
@@ -80,6 +85,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             {
                 HLVChienThuat c = new HLVChienThuat();
                 c.Nhap();
+                this.temp = c + this.temp;
                 this.lDoiBong.Add(c);
             }
 
@@ -89,6 +95,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             {
                 BacSi d = new BacSi();
                 d.Nhap();
+                this.temp = d + this.temp;
                 this.lDoiBong.Add(d);
             }
 
@@ -115,6 +122,11 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 item.Xuat();
             }
             this.sanDoiBong.Xuat();
+        }
+
+        public double TongLuongDoiBong()
+        {
+            return this.temp;
         }
     }
 }

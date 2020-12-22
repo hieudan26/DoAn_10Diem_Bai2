@@ -38,17 +38,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.sTruongDaoTao = tentruong;
         }
 
-        enum Bac
-        {
-            Bac1 = 1,
-            Bac2,
-            Bac3,
-            Bac4,
-            Bac5,
-            Bac6,
-            Bac7
-        }
-
         public override void Nhap()
         {
             Console.WriteLine("Moi nhap thong tin Bac Si ~~ ");
@@ -93,6 +82,11 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 Console.WriteLine("Thue thu nhap ca nhan cua Cau Thu la: " + this.TinhThue(hesoluong) + " VND");
             else
                 Console.WriteLine("Doi tuong khong nam trong danh sach dong thue!! ");
+        }
+
+        public static double operator +(BacSi a, double num)
+        {
+            return a.TinhLuong() + num;
         }
     }
 }

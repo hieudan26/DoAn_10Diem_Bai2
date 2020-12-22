@@ -10,7 +10,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
     {
         static public void KhamSucKhoeToanDoi(List<CauThu> list, BacSi BS)
         {
-            int a = 0;
+            //int a = 0;
             for(int i=0;i<list.Count;i++)
             {
                 CauThu temp = list[i];

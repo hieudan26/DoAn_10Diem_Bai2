@@ -87,7 +87,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine(" 2: Danh sach cau thu thuan chan phai");
             Console.WriteLine(" 3: Danh sach cau thu co the da tien dao");
             Console.WriteLine(" 4: Danh sach cau thu co the da tien ve");
-            Console.WriteLine(" 5: Danh sach cau thu co the da hau ve ve");
+            Console.WriteLine(" 5: Danh sach cau thu co the da hau ve");
             Console.Write("Ban muon loc danh sach theo cai gi: ");
             choose = int.Parse(Console.ReadLine());
             switch (choose)
@@ -195,18 +195,28 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             CauThu temp = lDsCauThu[0];
             foreach (var item in LDsCauThu)
             {
-                if (item.TinhTrangTheLuc > temp.TinhTrangTheLuc)
+                if (item > temp)
                     temp = item;
             }
             return temp;
         }
-        public CauThu CauThuCoTheSucKhoeTotNhat()
+        public CauThu CauThuCoTheSucKhoeYeuNhat()
         {
             CauThu temp = lDsCauThu[0];
             foreach (var item in LDsCauThu)
             {
-                if (item.TinhTrangSucKhoe > temp.TinhTrangSucKhoe)
+                if (item < temp)
                     temp = item;
+            }
+            return temp;
+        }
+
+        public double TongLuongToanCauThu()
+        {
+            double temp = 0;
+            foreach (var item in this.lDsCauThu)
+            {
+                temp = item + temp;
             }
             return temp;
         }
