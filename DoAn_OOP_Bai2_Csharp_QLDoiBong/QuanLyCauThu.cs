@@ -11,6 +11,11 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         private List<CauThu> lDsCauThu;
         public List<CauThu> LDsCauThu { get => lDsCauThu; set => lDsCauThu = value; }
 
+        public QuanLyCauThu()
+        {
+            this.LDsCauThu = new List<CauThu>();
+        }
+
         public QuanLyCauThu(List<CauThu> DsCauThu)
         {
             this.lDsCauThu = DsCauThu;
@@ -27,6 +32,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("5: So ao");
             Console.WriteLine("6: TT the luc");
             Console.WriteLine("7: TT Suc Khoe");
+            Console.WriteLine("=============================");
             Console.Write("Ban muon sap xep danh sach theo cai gi: ");
             choose = int.Parse(Console.ReadLine());
             switch(choose)
@@ -88,6 +94,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine(" 3: Danh sach cau thu co the da tien dao");
             Console.WriteLine(" 4: Danh sach cau thu co the da tien ve");
             Console.WriteLine(" 5: Danh sach cau thu co the da hau ve");
+            Console.WriteLine("=============================");
             Console.Write("Ban muon loc danh sach theo cai gi: ");
             choose = int.Parse(Console.ReadLine());
             switch (choose)
@@ -142,6 +149,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("=============================");
             Console.WriteLine(" 1: Ho ten");
             Console.WriteLine(" 2: So ao");
+            Console.WriteLine("=============================");
             Console.Write("Ban muon tim kiem theo cai gi: ");
             int choose = int.Parse(Console.ReadLine());
            
@@ -168,7 +176,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                     }
             }
         }
-        public void xuat()
+        public void Xuat()
         {
             foreach (var item in lDsCauThu)
             {

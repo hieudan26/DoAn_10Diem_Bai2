@@ -55,7 +55,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             DB.Nhap();
             DB.Xuat();
             Console.WriteLine("Tong luong doi bong: " + DB.TongLuongDoiBong());
-
+            DB.listCauThu.Sort();
+            DB.listCauThu.Xuat();
+            DB.listCauThu.Loc();
+            DB.listCauThu.Xuat();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         private string sTenNhaTaiTro;
         private List<CaNhan> lDoiBong;
         private San sanDoiBong;
+        private QuanLyCauThu lCauThu;
         public double temp = 0;
 
         public string NhaTaiTro
@@ -36,10 +37,17 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             set { this.sanDoiBong = value; }
         }
 
+        public QuanLyCauThu listCauThu
+        {
+            get { return this.lCauThu; }
+            set { this.lCauThu = value; }
+        }
+
         public DoiBong()
         {
             this.lDoiBong = new List<CaNhan>();
             this.sanDoiBong = new San();
+            this.lCauThu = new QuanLyCauThu();
         }
 
         public DoiBong(string tendoibong, string nhataitro, List<CaNhan> listdoibong, San sandoibong)
@@ -67,6 +75,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
                 a.Nhap();
                 this.temp = a + this.temp;
                 this.lDoiBong.Add(a);
+                this.lCauThu.LDsCauThu.Add(a);
             }
 
             Console.Write("Moi nhap so luong HLV The Luc trong Doi Bong: ");
