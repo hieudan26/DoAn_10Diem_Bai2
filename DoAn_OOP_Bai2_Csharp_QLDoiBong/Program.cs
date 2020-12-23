@@ -10,6 +10,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
     {
         static void Main(string[] args)
         {
+            /*
             List<CauThu> list= new List<CauThu>();
             List<CauThu> list2;
             Random a = new Random();
@@ -48,7 +49,13 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("Tong luong toan cau tu: " + temp2.TongLuongToanCauThu());
             DoiBong temp5 = new DoiBong();
             temp5.Nhap();
-            Console.WriteLine("Tong luong doi bong: " + temp5.TongLuongDoiBong());
+            Console.WriteLine("Tong luong doi bong: " + temp5.TongLuongDoiBong());*/
+
+            DoiBong DB = new DoiBong();
+            DB.Nhap();
+            DB.Xuat();
+            Console.WriteLine("Tong luong doi bong: " + DB.TongLuongDoiBong());
+
         }
     }
 }
