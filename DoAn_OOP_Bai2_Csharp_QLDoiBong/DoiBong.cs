@@ -11,9 +11,11 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         private string sTenDoiBong;
         private string sTenNhaTaiTro;
         private List<CaNhan> lDoiBong;
+        private List<BacSi> lBacsi;
+        private List<HLVChienThuat> lHLVChienThuat;
+        private List<HLVTheLuc> lHLVTheLuc;
         private San sanDoiBong;
         private QuanLyCauThu lCauThu;
-        public double temp = 0;
 
         public string NhaTaiTro
         {
@@ -43,6 +45,10 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             set { this.lCauThu = value; }
         }
 
+        internal List<BacSi> LBacsi { get => this.lBacsi; set => this.lBacsi = value; }
+        internal List<HLVChienThuat> LHLVChienThuat { get => this.lHLVChienThuat; set => this.lHLVChienThuat = value; }
+        internal List<HLVTheLuc> LHLVTheLuc { get => this.lHLVTheLuc; set => this.lHLVTheLuc = value; }
+
         public DoiBong()
         {
             this.lDoiBong = new List<CaNhan>();
@@ -71,55 +77,41 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             int cauthu = int.Parse(Console.ReadLine());
             for (int i = 0; i < cauthu; i++)
             {
-                CauThu a = new CauThu();
-                a.Nhap();
-                this.temp = a + this.temp;
-                this.lDoiBong.Add(a);
-                this.lCauThu.LDsCauThu.Add(a);
+                CauThu temp = new CauThu();
+                temp.Nhap();
+                this.lDoiBong.Add(temp);
+                this.lCauThu.LDsCauThu.Add(temp);
             }
 
             Console.Write("Moi nhap so luong HLV The Luc trong Doi Bong: ");
             int HLVTL = int.Parse(Console.ReadLine());
             for (int i = 0; i < HLVTL; i++)
             {
-                HLVTheLuc b = new HLVTheLuc();
-                b.Nhap();
-                this.temp = b + this.temp;
-                this.lDoiBong.Add(b);
+                HLVTheLuc temp = new HLVTheLuc();
+                temp.Nhap();
+                this.lDoiBong.Add(temp);
+                this.LHLVTheLuc.Add(temp);
             }
 
             Console.Write("Moi nhap so luong HLV Chien Thuat trong Doi Bong: ");
             int HLVCT = int.Parse(Console.ReadLine());
             for (int i = 0; i < HLVCT; i++)
             {
-                HLVChienThuat c = new HLVChienThuat();
-                c.Nhap();
-                this.temp = c + this.temp;
-                this.lDoiBong.Add(c);
+                HLVChienThuat temp = new HLVChienThuat();
+                temp.Nhap();
+                this.lDoiBong.Add(temp);
             }
 
             Console.Write("Moi nhap so luong Bac Si trong Doi Bong: ");
             int BS = int.Parse(Console.ReadLine());
             for (int i = 0; i < BS; i++)
             {
-                BacSi d = new BacSi();
-                d.Nhap();
-                this.temp = d + this.temp;
-                this.lDoiBong.Add(d);
+                BacSi temp = new BacSi();
+                temp.Nhap();
+                this.lDoiBong.Add(temp);
             }
 
-            Console.Write("1_Chon San Co Real || 2_Chon San FUTSAL/San Co Nhan Tao => your choice: ");
-            int choice = int.Parse(Console.ReadLine());
-            if (choice == 1)
-            {
-                this.sanDoiBong = new SanCoReal();
-                this.sanDoiBong.Nhap();
-            }
-            else
-            {
-                this.sanDoiBong = new SanFUTSAL();
-                this.sanDoiBong.Nhap();
-            }
+            
         }
 
         public void Xuat()
@@ -133,9 +125,5 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.sanDoiBong.Xuat();
         }
 
-        public double TongLuongDoiBong()
-        {
-            return this.temp;
-        }
     }
 }

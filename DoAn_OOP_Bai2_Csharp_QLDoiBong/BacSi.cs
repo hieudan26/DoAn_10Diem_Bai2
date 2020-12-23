@@ -12,7 +12,6 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         private const double hesoluong = 1.15;
         private string sRank;
         private string sTruongDaoTao;
-
         public string Rank
         {
             get { return this.sRank; }
@@ -25,17 +24,23 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             set { this.sTruongDaoTao = value; }
         }
 
-        public BacSi() : base() { }
+        public string Nghe { get => this.sNghe; set => this.sNghe = value; }
+
+        public BacSi() : base() {
+            this.sNghe = "bacsi";
+        }
 
         public BacSi(string hoten, int thoigianhopdong, double luongcoban, string cmnd, int namsinh, string rank, string tentruong) : base(hoten, thoigianhopdong, luongcoban, cmnd, namsinh) 
         {
             this.sRank = rank;
             this.sTruongDaoTao = tentruong;
+            this.sNghe = "bacsi";
         }
 
         public BacSi(string hoten, double luongcoban, string cmnd, string tentruong) : base(hoten, luongcoban, cmnd) 
         {
             this.sTruongDaoTao = tentruong;
+            this.sNghe = "bacsi";
         }
 
         public override void Nhap()

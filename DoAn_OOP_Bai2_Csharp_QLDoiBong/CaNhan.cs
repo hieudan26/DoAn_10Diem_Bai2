@@ -14,7 +14,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
         public double dLuongCoBan;
         public string sCMND;
         public int iNamSinh;
-
+        public string sNghe;
         public CaNhan() { }
         enum Bac
         {
